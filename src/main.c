@@ -122,7 +122,7 @@ int main(void)
         /* NOTE: This function will block the CPU forever */
         handle_error();
     }
-    status = tx_dma_configure((uint32_t *)&tx_buffer);
+    status = tx_dma_configure( );
 
        if (INIT_FAILURE == status)
        {

@@ -10,9 +10,8 @@ This example demonstrates the use of the SPI Serial Communication Block (SCB) re
 
 - [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
 - Board support package (BSP) minimum required version:
-- CYW920829M2EVK-02 : v1.0.1
-- CYW989829M2EVB-01 : v1.0.4
-- CYW989829M2EVB-03 : v1.0.4
+   - CYW920829M2EVK-02: v3.0.0
+   - CYW989829M2EVB-01: v3.0.0
 
 - Programming language: C
 - Associated parts: [AIROC&trade; CYW20829 Bluetooth&reg; LE SoC](https://www.infineon.com/cms/en/product/promopages/airoc20829),AIROC&trade; CYW89829 Bluetooth&reg; LE SoC
@@ -26,13 +25,13 @@ This example demonstrates the use of the SPI Serial Communication Block (SCB) re
 ## Supported kits (make variable 'TARGET')
 
 - [AIROC&trade; CYW20829 Bluetooth&reg; LE Evaluation Kit](https://www.infineon.com/CYW920829M2EVK-02) (`CYW920829M2EVK-02`) - Default value of `TARGET`
-- AIROC&trade; CYW20829 Bluetooth&reg; LE evaluation kit – (`CYW989829M2EVB-01`,`CYW989829M2EVK-03`)
+- AIROC&trade; CYW89829 Bluetooth&reg; LE Evaluation Kit (`CYW989829M2EVB-01`)
 
 ## Hardware setup
 
 This example uses the board's default configuration. See the kit user guide to ensure that the board is configured correctly.
 
-**Note:** The AIROC&trade; CYW20829 Bluetooth&reg; Kit (CYW920829M2EVK-02,CYW989829M2EVB-03) ships with KitProg3 version 2.21 installed. The ModusToolbox&trade; requires KitProg3 with the latest version 2.40. Before using this code example, make sure that the board is upgraded to KitProg3. The tool and instructions are available in the [Firmware Loader](https://github.com/Infineon/Firmware-loader) GitHub repository. If you do not upgrade, you will see an error such as "unable to find CMSIS-DAP device" or "KitProg firmware is out of date".
+**Note:** The AIROC&trade; CYW20829 Bluetooth&reg; Kit (CYW920829M2EVK-02) ships with KitProg3 version 2.21 installed. The ModusToolbox&trade; requires KitProg3 with the latest version 2.40. Before using this code example, make sure that the board is upgraded to KitProg3. The tool and instructions are available in the [Firmware Loader](https://github.com/Infineon/Firmware-loader) GitHub repository. If you do not upgrade, you will see an error such as "unable to find CMSIS-DAP device" or "KitProg firmware is out of date".
 
 In AIROC&trade; CYW20829 Bluetooth&reg; kit (CYW920829M2EVK-02) the SPI (CS, CLK) and User Button2, USER LED1 share the same GPIOs, while you need SPI USER LED1 will be glowing based on SPI CLK activity. The SWD and SPI (MOSI, MISO) interfaces share the same GPIOs and must use one interface at a time. See the table below to make SPI connections:
 
@@ -197,7 +196,7 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
 5. After successful connection with the slave, the LED blinks every second. Confirm that the UART terminal displays the following.
 
-**Note:** For CYW989829M2EVB-03 board, use Blue LED to blink.
+**Note:** For CYW989829M2EVB-01 board, there are no LED2 on the board and can not see the LED2  to blink. Just check terminal out and check pin P5[2] (LED2_L as J7.8)
 
    **Figure 2. Terminal output after successful connection**
 
@@ -250,7 +249,7 @@ Document title: *CE238555* – *AIROC&trade; CYW20829 Bluetooth&reg; CYW89829 Bl
  1.0.0   | New code example
  1.1.0   | Added support for CYW989829M2EVB-01
  1.2.0   | Updated device mpn of CYW989829M2EVB-01 and added support for CYW989829M2EVB-03.
-
+ 1.3.0   | Updated MPN from CYW89829B0232 to CYW89829B1232, and from CYW20829B0LKML to CYW20829B1010. Additionally, removed support for CYW989829M2EVB-03.
 <br>
 
 All referenced product or service names and trademarks are the property of their respective owners.
